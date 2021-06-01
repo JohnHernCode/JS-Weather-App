@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/display.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/display.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <workItem from="1622486274360" duration="8022000" />
       <workItem from="1622510002682" duration="83000" />
       <workItem from="1622510095218" duration="13663000" />
-      <workItem from="1622548072394" duration="11388000" />
+      <workItem from="1622548072394" duration="13374000" />
     </task>
     <servers />
   </component>

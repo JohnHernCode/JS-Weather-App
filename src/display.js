@@ -1,6 +1,9 @@
 const view = (() => {
   const setSearchResult = (weatherData) => {
-    if (!weatherData) return;
+    if (!weatherData) {
+      localStorage.setItem('temp', '');
+      return;
+    }
 
     const city = document.querySelector('.city');
     const icon = document.querySelector('.icon');
