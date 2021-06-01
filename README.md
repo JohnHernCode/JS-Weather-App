@@ -19,7 +19,7 @@ and view the current weather from that city.
 
 ## Screen Shot
 
-![screenshot](/screenshot.png)
+![screenshot](/screen.jpg)
 
 ## Live Demo
 
