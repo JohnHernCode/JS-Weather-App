@@ -9,14 +9,14 @@ const searchInput = document.querySelector(".search-bar");
 const searchBtn = document.querySelector(".btn");
 
 searchForm.addEventListener("keyup", (e) => {
-    e.preventDefault();
-    if (e.keyCode === 13) {
-        document.querySelector(".btn").click();
-    }
+  e.preventDefault();
+  if (e.keyCode === 13) {
+    document.querySelector(".btn").click();
+  }
 });
 
 searchBtn.addEventListener("click", async () => {
-    if (searchInput.value === "") return;
-    const weatherData = await weather.getData(searchInput.value);
-    view.setSearchResult(weatherData);
+  if (searchInput.value === "") return;
+  const weatherData = await weather.getData(searchInput.value);
+  view.setSearchResult(weatherData);
 });
