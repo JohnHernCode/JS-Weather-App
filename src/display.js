@@ -18,9 +18,7 @@ const view = (() => {
     desc.textContent = `${weatherData.description.toUpperCase()}`;
     humidity.textContent = `Humidity: ${weatherData.humidity} %`;
     wind.textContent = `Wind: ${weatherData.speed} m/h`;
-
     localStorage.setItem('temp', weatherData.temp);
-
   };
   localStorage.setItem('toggleC', true);
   return { setSearchResult };
@@ -32,16 +30,14 @@ const tempChange = () => {
   const toggleC = JSON.parse(localStorage.getItem('toggleC'));
   const tempM = JSON.parse(localStorage.getItem('temp'));
 
-  if(toggleC) {
-
+  if (toggleC) {
     localStorage.setItem('toggleC', 'false');
-
-    temp.textContent = `${Math.round((tempM * 9)/5 + 32)} °F`;
-  }else {
+    temp.textContent = `${Math.round((tempM * 9) / 5 + 32)} °F`;
+  } else {
     localStorage.setItem('toggleC', 'true');
     temp.textContent = `${Math.round(tempM)} °C`;
   }
   return temp;
-}
+};
 
 export { view, tempChange };
