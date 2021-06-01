@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("49back.jpg");
+}
+
+.card {
+  background: #000;
+  opacity: 0.6;
+  border-radius: 15px;
+}
+
+.weather {
+  margin: 10px;
+  color: #fff;
+}
+
+.search {
+  margin: 10px;
+}
