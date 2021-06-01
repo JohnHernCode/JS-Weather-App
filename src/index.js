@@ -1,10 +1,11 @@
 import './style.css';
 import weather from './api';
-import view from './display';
+import * as view from './display';
 
 const searchForm = document.querySelector('.search');
 const searchInput = document.querySelector('.search-bar');
 const searchBtn = document.querySelector('.btn');
+const changeBtn = document.querySelector('.degree');
 
 searchForm.addEventListener('keyup', (e) => {
   e.preventDefault();
@@ -16,5 +17,10 @@ searchForm.addEventListener('keyup', (e) => {
 searchBtn.addEventListener('click', async () => {
   if (searchInput.value === '') return;
   const weatherData = await weather.getData(searchInput.value);
-  view.setSearchResult(weatherData);
+  view.view.setSearchResult(weatherData);
 });
+
+changeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  view.tempChange();
+})

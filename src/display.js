@@ -3,17 +3,39 @@ const view = (() => {
     if (!weatherData) return;
 
     const city = document.querySelector('.city');
-    const temp = document.querySelector('.temp');
+    const icon = document.querySelector('.icon');
+    const desc = document.querySelector('.description');
     const humidity = document.querySelector('.humidity');
     const wind = document.querySelector('.wind');
+    const temp = document.querySelector('.temp');
 
     city.textContent = `${weatherData.city}`;
-    temp.textContent = `${weatherData.temp} °F`;
+    temp.textContent = `${Math.round(weatherData.temp)} °C`;
+    icon.src = "https://openweathermap.org/img/wn/" + weatherData.icon + ".png";
+    desc.textContent = `${weatherData.description.toUpperCase()}`;
     humidity.textContent = `Humidity: ${weatherData.humidity} %`;
     wind.textContent = `Wind: ${weatherData.speed} m/h`;
-  }
+    localStorage.setItem('temp', weatherData.temp);
 
+  }
+  localStorage.setItem('toggleC', true);
   return { setSearchResult };
 })();
 
-export default view;
+const tempChange = () => {
+  const temp = document.querySelector('.temp');
+
+  let toggleC = JSON.parse(localStorage.getItem('toggleC'));
+  let tempM = JSON.parse(localStorage.getItem('temp'));
+
+  if(toggleC) {
+    localStorage.setItem('toggleC', 'false');
+    temp.textContent = `${Math.round(tempM*9/5 + 32)} °F`;
+  }else {
+    localStorage.setItem('toggleC', 'true');
+    temp.textContent = `${Math.round(tempM)} °C`;
+  }
+  return temp;
+}
+
+export { view, tempChange };
