@@ -27,12 +27,12 @@ const weather = (() => {
       const data = convertData(await response.json());
       return data;
     } catch (error) {
-      let message = document.querySelector(".message");
+      const message = document.querySelector('.message');
       message.innerHTML = `${city} is not found`;
       window.location.reload();
       return null;
     }
-  }
+  };
 
   return { getData };
 })();

@@ -14,13 +14,14 @@ const view = (() => {
 
     city.textContent = `${weatherData.city}`;
     temp.textContent = `${Math.round(weatherData.temp)} °C`;
-    icon.src = "https://openweathermap.org/img/wn/" + weatherData.icon + ".png";
+    icon.src = `https://openweathermap.org/img/wn/${weatherData.icon}.png`;
     desc.textContent = `${weatherData.description.toUpperCase()}`;
     humidity.textContent = `Humidity: ${weatherData.humidity} %`;
     wind.textContent = `Wind: ${weatherData.speed} m/h`;
+
     localStorage.setItem('temp', weatherData.temp);
 
-  }
+  };
   localStorage.setItem('toggleC', true);
   return { setSearchResult };
 })();
@@ -28,8 +29,8 @@ const view = (() => {
 const tempChange = () => {
   const temp = document.querySelector('.temp');
 
-  let toggleC = JSON.parse(localStorage.getItem('toggleC'));
-  let tempM = JSON.parse(localStorage.getItem('temp'));
+  const toggleC = JSON.parse(localStorage.getItem('toggleC'));
+  const tempM = JSON.parse(localStorage.getItem('temp'));
 
   if(toggleC) {
     localStorage.setItem('toggleC', 'false');
