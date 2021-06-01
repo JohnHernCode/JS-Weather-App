@@ -1,21 +1,20 @@
-
 const view = (() => {
-    function setSearchResult(weatherData) {
-        if (!weatherData) return;
+  function setSearchResult(weatherData) {
+    if (!weatherData) return;
 
-        const weather = document.querySelector(".weather");
-        const city = document.querySelector(".city");
-        const temp = document.querySelector(".temp");
-        const humidity = document.querySelector(".humidity");
-        const wind = document.querySelector(".wind");
+    const weather = document.querySelector(".weather");
+    const city = document.querySelector(".city");
+    const temp = document.querySelector(".temp");
+    const humidity = document.querySelector(".humidity");
+    const wind = document.querySelector(".wind");
 
-        city.textContent = `${weatherData.city}`;
-        temp.textContent = `${weatherData.temp} °F`;
-        humidity.textContent = `Humidity: ${weatherData.humidity} %`;
-        wind.textContent = `Wind: ${weatherData.speed} m/h`;
-    }
+    city.textContent = `${weatherData.city}`;
+    temp.textContent = `${weatherData.temp} °F`;
+    humidity.textContent = `Humidity: ${weatherData.humidity} %`;
+    wind.textContent = `Wind: ${weatherData.speed} m/h`;
+  }
 
-    return { setSearchResult };
+  return {setSearchResult};
 })();
 
 export default view;
