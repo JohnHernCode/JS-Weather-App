@@ -23,7 +23,7 @@ and view the current weather from that city.
 
 ## Live Demo
 
-[Demo](https://jadx2.github.io/todo-list/)
+[Demo](https://johnherncode.github.io/JS-Weather-App/)
 
 ### Built With
 
@@ -32,6 +32,7 @@ This project was built using these technologies.
 - Bootstrap
 - HTML / CSS / SCSS
 - JavaScript
+- openweathermap.org API
 
 ### Getting Started
 
@@ -45,29 +46,26 @@ To get a local copy up and running follow these simple example steps.
 
 ### Clone
 
-- [download zip link](https://github.com/jadx2/todo-list/archive/refs/heads/feature/todo-list.zip) or clone this repo:
+- [download zip link](https://github.com/JohnHernCode/JS-Weather-App/archive/refs/heads/develop.zip) or clone this repo:
   - Clone with SSH:
   ```
-    git@github.com:jadx2/todo-list.git
+    git@github.com:JohnHernCode/JS-Weather-App.git
   ```
   - Clone with HTTPS
   ```
-    https://github.com/jadx2/todo-list.git
+    https://github.com/JohnHernCode/JS-Weather-App.git
   ```
 
 ### Usage
 1. cd the location you cloned/unzipped the file to.
 2. Run ```npm install``` to bundle install everything.
-3. Run ```npm Start``` to run the webpack server.
+3. cd dist and run your server (such as live-server in vscode or node.js live-server).
 4. It should automatically open in your default browser.
 
-#### Create a new project with the form
+#### Search for the weather in any city
 
-Click on the New Project button and add your project title. 
-
-#### Create a new To Do item
-
-Click on the New Task button and add your task title, description, priority, project it belongs to, and the date it is due by. 
+Click on the search form and enter a city. You can then press enter, or click the search button.
+The results will show. 
 
 <!-- CONTACT -->
 
