@@ -1,5 +1,5 @@
 const view = (() => {
-  function setSearchResult(weatherData) {
+  const setSearchResult = (weatherData) => {
     if (!weatherData) return;
 
     const city = document.querySelector('.city');
