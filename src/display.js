@@ -33,8 +33,10 @@ const tempChange = () => {
   const tempM = JSON.parse(localStorage.getItem('temp'));
 
   if(toggleC) {
+
     localStorage.setItem('toggleC', 'false');
-    temp.textContent = `${Math.round(tempM*9/5 + 32)} °F`;
+
+    temp.textContent = `${Math.round((tempM * 9)/5 + 32)} °F`;
   }else {
     localStorage.setItem('toggleC', 'true');
     temp.textContent = `${Math.round(tempM)} °C`;

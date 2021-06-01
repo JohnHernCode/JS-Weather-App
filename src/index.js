@@ -23,4 +23,4 @@ searchBtn.addEventListener('click', async () => {
 changeBtn.addEventListener('click', (e) => {
   e.preventDefault();
   view.tempChange();
-})
+});
