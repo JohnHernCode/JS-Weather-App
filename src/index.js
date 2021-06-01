@@ -1,11 +1,26 @@
-import _ from 'lodash';
 import './style.css';
+import weather from './api';
+import * as view from './display';
 
-function component() {
-    const element = document.createElement('div');
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const searchForm = document.querySelector('.search');
+const searchInput = document.querySelector('.search-bar');
+const searchBtn = document.querySelector('.btn');
+const changeBtn = document.querySelector('.degree');
 
-    return element;
-}
+searchForm.addEventListener('keyup', (e) => {
+  e.preventDefault();
+  if (e.keyCode === 13) {
+    document.querySelector('.btn').click();
+  }
+});
 
-document.body.appendChild(component());
+searchBtn.addEventListener('click', async () => {
+  if (searchInput.value === '') return;
+  const weatherData = await weather.getData(searchInput.value);
+  view.view.setSearchResult(weatherData);
+});
+
+changeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  view.tempChange();
+});

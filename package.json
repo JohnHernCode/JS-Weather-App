@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
     "watch": "webpack --watch",
     "build": "webpack"
   },
@@ -26,6 +27,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
+    "alertifyjs": "^1.13.1",
     "lodash": "^4.17.21"
   }
 }
